@@ -172,6 +172,7 @@ span {
     border-bottom: 1px solid black;
     padding-bottom: 0;
     height: 2em;
+    text-align: center;
 }
 
 .row {
