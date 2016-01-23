@@ -16,7 +16,7 @@ angular.module('myApp', [])
                 $scope.genderAppropriateLanguage.pronoun = 'her';
                 $scope.genderAppropriateLanguage.possessive = 'her';
                 $scope.gender = "";
-            } else if (gender == 'male') {
+            } else {
                 $scope.genderAppropriateLanguage.subject = 'he';
                 $scope.genderAppropriateLanguage.pronoun = 'him';
                 $scope.genderAppropriateLanguage.possessive = 'his';
