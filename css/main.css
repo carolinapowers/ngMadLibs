@@ -168,7 +168,7 @@ input {
 
 span {
     display: inline-block;
-    width: 100px;
+    min-width: 100px;
     border-bottom: 1px solid black;
     padding-bottom: 0;
     height: 2em;
