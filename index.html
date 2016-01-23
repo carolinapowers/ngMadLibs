@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" lang="" ng-app="">
+<html class="no-js" lang="" ng-app="myApp">
 
 <head>
     <meta charset="utf-8">
@@ -28,7 +28,7 @@
         <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div id="div-wrapper">
+    <div id="div-wrapper" ng-controller="MainCtrl">
         <header>
             <div id="smile-div" class="header-items col-md-2 col-sm-1 col-xs-12">
                 <img src="assets/ngMadLibsSmile">
@@ -40,9 +40,10 @@
         </header>
         <section>
             <h2>Provide the following words:</h2>
+
             <div class="row">
                 <div class="col-md-3 col-sm-12">
-                    <input type="text" placeholder="Male name" ng-model="maleName">
+                    <input type="text" placeholder="Name" ng-model="maleName">
                     <input type="text" placeholder="Job Title" ng-model="jobTitle">
                     <input type="text" placeholder="Tedious task" ng-model="tediousTask">
                 </div>
@@ -57,11 +58,14 @@
                     <input type="text" placeholder="Adjective" ng-model="adjective">
                 </div>
             </div>
+            <button class="btn btn-default" ng-click="gender = 'male'; changeGender(gender)">Male</button>
+            <button id="female-button" class="btn btn-default" ng-click="gender = 'female'; changeGender(gender)">Female</button>
+
         </section>
         <div id="text-div">
-            <p>
-                <span>{{maleName}} </span> was a <span>{{jobTitle}}</span> who loved technology. Although he loved parts of his job, he absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with his life mentor <span>{{celebrity}}</span> who told him to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so he studied programming instead.
-                <p>What a great decision! With his new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiuousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> faster.</p>
+            <p>{{subject}}
+                <span>{{maleName}} </span> was a <span>{{jobTitle}}</span> who loved technology. Although <span>{{genderAppropriateLanguage.subject}}</span> loved parts of <span>{{genderAppropriateLanguage.possessive}}</span> job, <span>{{genderAppropriateLanguage.subject}}</span> absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with <span>{{genderAppropriateLanguage.possessive}}</span> life mentor <span>{{celebrity}}</span> who told <span>{{genderAppropriateLanguage.pronoun}}</span> to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so <span>{{genderAppropriateLanguage.subject}}</span> studied programming instead.
+                <p>What a great decision! With <span>{{genderAppropriateLanguage.possessive}}</span> new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiuousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> faster.</p>
             </p>
         </div>
 
