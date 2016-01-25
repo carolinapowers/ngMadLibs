@@ -144,7 +144,7 @@ section {
     border-collapse: collapse;
     padding-left: 3em;
     padding-bottom: 5em;
-    border-bottom: none;
+    /*    border-bottom: none;*/
 }
 
 section > h2 {
@@ -159,6 +159,10 @@ input {
     text-align: center;
 }
 
+input:focus {
+    outline: none;
+}
+
 #text-div {
     border: 3px solid black;
     border-collapse: collapse;
@@ -168,7 +172,7 @@ input {
 
 span {
     display: inline-block;
-    width: 100px;
+    min-width: 100px;
     border-bottom: 1px solid black;
     padding-bottom: 0;
     height: 2em;
@@ -191,7 +195,22 @@ span {
 }
 
 #female-button {
-    margin-left: 1.2em;
+    margin-left: 1.6em;
+}
+
+.ng-dirty {
+    border-color: red;
+    border-top-color: red;
+}
+
+.ng-valid-required {
+    border-color: green;
+}
+
+.help-block {
+    color: red;
+    margin-left: 2.5em;
+    margin-bottom: 0;
 }
 
 
