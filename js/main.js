@@ -1,12 +1,13 @@
-angular.module('myApp', [])
+angular.module('myApp', ['ngMessages'])
     .controller('MainCtrl', function ($scope) {
         $scope.gender = '';
 
+        $scope.formIsVisible = true;
 
         $scope.genderAppropriateLanguage = {
-            subject: "",
-            pronoun: "",
-            possessive: ""
+            subject: "he/she",
+            pronoun: "him/her",
+            possessive: "his/her"
         }
 
         $scope.changeGender = function (gender) {
@@ -23,4 +24,24 @@ angular.module('myApp', [])
                 $scope.gender = "";
             }
         }
+
+        $scope.submit = function () {
+            $scope.formIsVisible = false;
+        };
+
+        $scope.startOver = function () {
+            $scope.formIsVisible = true;
+            $scope.maleName = "";
+            $scope.jobTitle = "";
+            $scope.tediousTask = "";
+            $scope.dirtyTask = "";
+            $scope.celebrity = "";
+            $scope.uselessSkill = "";
+            $scope.obnoxiuousCelebrity = "";
+            $scope.hugeNumber = "";
+            $scope.adjective = "";
+            $scope.madForm.$submitted = false;
+            $scope.madForm.$setPristine();
+        }
+
     });

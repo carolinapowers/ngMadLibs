@@ -38,39 +38,87 @@
                 <h1>Automate This!</h1>
             </div>
         </header>
-        <section>
+        <section ng-show="formIsVisible">
+
             <h2>Provide the following words:</h2>
+            <form ng-submit="madForm.$valid && submit() " name="madForm" novalidate>
+                <div class="row">
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" ng-model="maleName" name="maleName" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.maleName.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Job Title" ng-model="jobTitle" name="jobTitle" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.jobTitle.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Tedious task" ng-model="tediousTask" name="tediousTask" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.tediousTask.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" placeholder="Dirty Task" ng-model="dirtyTask" name="dirtyTask" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.dirtyTask.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Celebrity" ng-model="celebrity" name="celebrity" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.celebrity.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Useless skill" ng-model="uselessSkill" name="uselessSkill" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.uselessSkill.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-12">
+                        <div class="form-group">
+                            <input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuousCelebrity" name="obnoxiuousCelebrity" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.obnoxiuousCelebrity.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" placeholder="Huge number" ng-model="hugeNumber" name="hugeNumber" number-type required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.hugeNumber.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Adjective" ng-model="adjective" name="adjective" required>
+                            <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.adjective.$error">
+                                <p class="error" ng-message="required">Field is required!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="row">
-                <div class="col-md-3 col-sm-12">
-                    <input type="text" placeholder="Name" ng-model="maleName">
-                    <input type="text" placeholder="Job Title" ng-model="jobTitle">
-                    <input type="text" placeholder="Tedious task" ng-model="tediousTask">
+                <button class="btn btn-default" type="button" ng-click="gender = 'male'; changeGender(gender)">Male</button>
+                <button id="female-button" class="btn btn-default" type="button" ng-click="gender = 'female'; changeGender(gender)">Female</button>
+                <div>
+                    <button id="submit-button" class="btn btn-default" type="submit" value="Submit">Generate My Mad Lib</button>
                 </div>
-                <div class="col-md-3 col-sm-12">
-                    <input type="text" placeholder="Dirty Task" ng-model="dirtyTask">
-                    <input type="text" placeholder="Celebrity" ng-model="celebrity">
-                    <input type="text" placeholder="Useless skill" ng-model="uselessSkill">
-                </div>
-                <div class="col-md-3 col-sm-12">
-                    <input type="text" placeholder="Obnoxious celebrity" ng-model="obnoxiuousCelebrity">
-                    <input type="text" placeholder="Huge number" ng-model="hugeNumber">
-                    <input type="text" placeholder="Adjective" ng-model="adjective">
-                </div>
-            </div>
-            <button class="btn btn-default" ng-click="gender = 'male'; changeGender(gender)">Male</button>
-            <button id="female-button" class="btn btn-default" ng-click="gender = 'female'; changeGender(gender)">Female</button>
-
+            </form>
         </section>
-        <div id="text-div">
+        <div id="text-div" ng-hide="formIsVisible">
             <p>{{subject}}
                 <span>{{maleName}} </span> was a <span>{{jobTitle}}</span> who loved technology. Although <span>{{genderAppropriateLanguage.subject}}</span> loved parts of <span>{{genderAppropriateLanguage.possessive}}</span> job, <span>{{genderAppropriateLanguage.subject}}</span> absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with <span>{{genderAppropriateLanguage.possessive}}</span> life mentor <span>{{celebrity}}</span> who told <span>{{genderAppropriateLanguage.pronoun}}</span> to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so <span>{{genderAppropriateLanguage.subject}}</span> studied programming instead.
                 <p>What a great decision! With <span>{{genderAppropriateLanguage.possessive}}</span> new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiuousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> faster.</p>
             </p>
+            <button class="btn btn-default" ng-click="startOver()">Start Over</button>
         </div>
-
-
-
     </div>
     <!--div-wrapper-->
 
@@ -83,6 +131,7 @@
 
     <!--    <script src="bower_components/angular/angular.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-messages.js"></script>
     <!-- endbower -->
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
