@@ -43,5 +43,5 @@ angular.module('myApp', ['ngMessages'])
             $scope.madForm.$submitted = false;
             $scope.madForm.$setPristine();
         }
-
+        $scope.integerval = /^\d*$/;
     });

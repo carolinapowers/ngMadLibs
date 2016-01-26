@@ -91,7 +91,8 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <input type="number" placeholder="Huge number" ng-model="hugeNumber" name="hugeNumber" number-type required>
+                            <input type="number" placeholder="Huge number" ng-model="hugeNumber" name="hugeNumber" ng-pattern="integerval" required>
+                            <!--<p class="help-block" ng-if="madForm.hugeNumber.$invalid && madForm.hugeNumber.$dirty && madForm.hugeNumber">Hey! No letters, buddy!</p>-->
                             <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.hugeNumber.$error">
                                 <p class="error" ng-message="required">Field is required!</p>
                             </div>
