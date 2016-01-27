@@ -38,11 +38,7 @@
                 <h1>Automate This!</h1>
             </div>
         </header>
-<<<<<<< HEAD
-        <section ng-show="formIsVisible">
-=======
         <section ng-show="formIsVisible" class="form">
->>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
 
             <h2>Provide the following words:</h2>
             <form ng-submit="madForm.$valid && submit() " name="madForm" novalidate>
@@ -95,12 +91,7 @@
                             </div>
                         </div>
                         <div class="form-group">
-<<<<<<< HEAD
-                            <input type="number" placeholder="Huge number" ng-model="hugeNumber" name="hugeNumber" ng-pattern="integerval" required>
-                            <!--<p class="help-block" ng-if="madForm.hugeNumber.$invalid && madForm.hugeNumber.$dirty && madForm.hugeNumber">Hey! No letters, buddy!</p>-->
-=======
                             <input type="number" placeholder="Huge number" ng-model="hugeNumber" name="hugeNumber" number-type required>
->>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
                             <div class="help-block" ng-if="madForm.$submitted" ng-messages="madForm.hugeNumber.$error">
                                 <p class="error" ng-message="required">Field is required!</p>
                             </div>
@@ -121,11 +112,7 @@
                 </div>
             </form>
         </section>
-<<<<<<< HEAD
-        <div id="text-div" ng-hide="formIsVisible">
-=======
         <div id="text-div" ng-hide="formIsVisible" class="text">
->>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
             <p>{{subject}}
                 <span>{{maleName}} </span> was a <span>{{jobTitle}}</span> who loved technology. Although <span>{{genderAppropriateLanguage.subject}}</span> loved parts of <span>{{genderAppropriateLanguage.possessive}}</span> job, <span>{{genderAppropriateLanguage.subject}}</span> absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with <span>{{genderAppropriateLanguage.possessive}}</span> life mentor <span>{{celebrity}}</span> who told <span>{{genderAppropriateLanguage.pronoun}}</span> to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so <span>{{genderAppropriateLanguage.subject}}</span> studied programming instead.
                 <p>What a great decision! With <span>{{genderAppropriateLanguage.possessive}}</span> new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiuousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> faster.</p>
@@ -145,11 +132,8 @@
     <!--    <script src="bower_components/angular/angular.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-messages.js"></script>
-<<<<<<< HEAD
-=======
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.js
 "></script>
->>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
     <!-- endbower -->
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
