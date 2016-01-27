@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 angular.module('myApp', ['ngMessages'])
+=======
+angular.module('myApp', ['ngMessages', 'ngAnimate'])
+>>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
     .controller('MainCtrl', function ($scope) {
         $scope.gender = '';
 
@@ -43,5 +47,9 @@ angular.module('myApp', ['ngMessages'])
             $scope.madForm.$submitted = false;
             $scope.madForm.$setPristine();
         }
+<<<<<<< HEAD
         $scope.integerval = /^\d*$/;
+=======
+
+>>>>>>> d0c8484a233fe1ac9c61b49da0b2cba44dadc7eb
     });
