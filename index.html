@@ -38,7 +38,7 @@
                 <h1>Automate This!</h1>
             </div>
         </header>
-        <section ng-show="formIsVisible">
+        <section ng-show="formIsVisible" class="form">
 
             <h2>Provide the following words:</h2>
             <form ng-submit="madForm.$valid && submit() " name="madForm" novalidate>
@@ -112,7 +112,7 @@
                 </div>
             </form>
         </section>
-        <div id="text-div" ng-hide="formIsVisible">
+        <div id="text-div" ng-hide="formIsVisible" class="text">
             <p>{{subject}}
                 <span>{{maleName}} </span> was a <span>{{jobTitle}}</span> who loved technology. Although <span>{{genderAppropriateLanguage.subject}}</span> loved parts of <span>{{genderAppropriateLanguage.possessive}}</span> job, <span>{{genderAppropriateLanguage.subject}}</span> absolutely hated <span>{{tediousTask}}</span> and <span>{{dirtyTask}}</span>. So, <span>{{maleName}}</span> met with <span>{{genderAppropriateLanguage.possessive}}</span> life mentor <span>{{celebrity}}</span> who told <span>{{genderAppropriateLanguage.pronoun}}</span> to learn how to <span>{{uselessSkill}}</span> with Thinkful. Thinkful didn't offer a course on <span>{{uselessSkill}}</span> so <span>{{genderAppropriateLanguage.subject}}</span> studied programming instead.
                 <p>What a great decision! With <span>{{genderAppropriateLanguage.possessive}}</span> new skills, <span>{{maleName}}</span> built a(n) <span>{{adjective}}</span> robot named <span>{{obnoxiuousCelebrity}}</span> that not only loved <span>{{dirtyTask}}</span> but did it <span>{{hugeNumber}}</span> faster.</p>
@@ -132,6 +132,8 @@
     <!--    <script src="bower_components/angular/angular.js"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-messages.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-animate.js
+"></script>
     <!-- endbower -->
     <script>
         window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')
