@@ -225,16 +225,22 @@ Author's custom styles
                 opacity: 0;
             }
         }
+        /*ng-enter is not working*/
         
+        .help-block.ng-enter,
+        .help-block.ng-leave,
         .error.ng-enter,
         .error.ng-leave {
-            transition: 500ms opacity;
+            transition: 800ms opacity;
         }
         
+        .help-block.ng-enter,
         .error.ng-enter {
             opacity: 0;
         }
         
+        .help-block.ng-leave,
+        .help-block.ng-enter-active,
         .error.ng-leave,
         .ng-enter-active {
             opacity: 1;
